@@ -10,14 +10,29 @@ document.addEventListener(
     const url = link.href;
     if (!url) return;
 
-    // Moodle resource links
-    if (!url.includes("/mod/resource/view.php"))
-        return;
+    const lower = url.toLowerCase();
 
-    event.preventDefault();
-    event.stopImmediatePropagation();
+    // Case 1: Direct Moodle resource page
+    if (lower.includes("/mod/resource/view.php")) {
 
-    window.open(url, "_blank", "noopener");
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      console.log("Opening resource in new tab:", url);
+      window.open(url, "_blank", "noopener");
+      return;
+    }
+
+    // Case 2: Direct file link (folder PDFs)
+    if (lower.includes("pluginfile.php") && lower.includes(".pdf")) {
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      console.log("Opening PDF file in new tab:", url);
+      window.open(url, "_blank", "noopener");
+      return;
+    }
 
   },
   true
