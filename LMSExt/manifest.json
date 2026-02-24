@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "LMS Force Previewer",
+  "version": "1.0",
+
+  "permissions": ["declarativeNetRequest"],
+
+  "host_permissions": [
+    "*://*/pluginfile.php/*",
+    "*://*/mod/resource/*"
+  ],
+"icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/course/*", "*://*/mod/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
