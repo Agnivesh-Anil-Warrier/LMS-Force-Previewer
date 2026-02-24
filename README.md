@@ -1,4 +1,8 @@
 # LMS Force Previewer - Enable PDF Preview Instead of Forced Downloads
+![Release](https://img.shields.io/github/v/release/Agnivesh-Anil-Warrier/LMS-Force-Preview)
+![License](https://img.shields.io/github/license/Agnivesh-Anil-Warrier/LMS-Force-Preview)
+![Last Commit](https://img.shields.io/github/last-commit/Agnivesh-Anil-Warrier/LMS-Force-Preview)
+![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)
 
 Some Learning Management Systems (LMS) force PDF files to download instead of allowing browser preview.
 
