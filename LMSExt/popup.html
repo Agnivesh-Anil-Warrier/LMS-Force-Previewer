@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LMS Force Previewer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 300px;
+      background: #13151f;
+      color: #e2e8f0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      overflow: hidden;
+    }
+
+    .header {
+  background: linear-gradient(135deg, #ff6b81, #ff4757); /* rosy reds */
+  padding: 18px 16px 14px;
+}
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.2px;
+    }
+
+    .version {
+      font-size: 11px;
+      color: rgba(255,255,255,0.9);
+      margin-top: 2px;
+    }
+
+    .content {
+      padding: 14px 16px;
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #48bb78;
+      box-shadow: 0 0 6px #48bb78;
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .status-text {
+      font-size: 12px;
+      color: #a0aec0;
+    }
+
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #718096;
+      margin-bottom: 8px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #a0aec0;
+    }
+
+    .feature-list .icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .icon-pdf { background: rgba(229, 62, 62, 0.15); }
+
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-text {
+      font-size: 11px;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-top">
+      <span class="logo">🎓</span>
+      <div>
+        <h1>LMS Force Previewer</h1>
+        <div class="version">v1.0.0 · Brave/Chrome</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="status-row">
+      <div class="status-dot"></div>
+      <span class="status-text">Active on all pages — scanning for file links</span>
+    </div>
+
+    <div class="section-title">Supported Formats</div>
+    <ul class="feature-list">
+      <li>
+        <div class="icon icon-pdf">📄</div>
+        <span><strong style="color:#fc8181">PDF</strong> Preview (native)</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer">
+  </div>
+</body>
+</html>
